@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Orar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+          <div class="card" >
+    <h:form >
+        <p:growl id="messages"/>
+
+        <p:menubar style="background-color: lightsteelblue">
+              <p:divider layout="vertical"/>
+            <p:submenu label="Conturi" icon="pi pi-fw pi-users">
+                <p:menuitem value="Crează cont student" url="creareContStudent.xhtml" />
+                <p:divider />
+                <p:menuitem value="Crează cont profesor" />
+            </p:submenu>
+            <p:divider layout="vertical"/>
+            <p:submenu   label="Orar" icon="pi pi-fw pi-calendar">
+               
+                <p:menuitem value="Adaugă" url="adaugareOrar.xhtml"/>
+               
+            </p:submenu>
+            
+            <p:divider layout="vertical"/>
+            <p:submenu label="Perioadă evaluare" icon="pi pi-fw pi-clock">
+                <p:menuitem value="Configurează" />
+               
+            </p:submenu>
+            <p:divider layout="vertical"/>
+           
+
+          
+            <f:facet name="options">
+               
+                <p:commandButton value="Logout" icon="pi pi-fw pi-sign-out" styleClass="ui-button-info"
+                          style="background-color: windowframe"
+                          action="#{controllerLogin.clickLogout()}"/>
+            </f:facet>
+        </p:menubar>
+        
+    </h:form>
+               
+              
+</div>
+         <div class="orar" style = "width: 430px; height: 380px;  
+             box-shadow: 1px 1px 5px black ; margin-left: 550px; margin-top: 130px; background-color:whitesmoke " align="center">
+             <h:panelGrid columns="4">
+                  <p:growl id="messages"/>
+                  
+     <h:form enctype="multipart/form-data">
+         <br></br>
+         <h5 class="p-mt-0" style="font-size: 25px">Adăugare orar</h5>
+         <p:fileUpload value="null" mode="simple" skinSimple="true" required="true" requiredMessage="Încărcați orar!"/>
+         <br></br>
+         <br></br>
+         <p:commandButton value="Încarcă"   style="background: windowframe" ajax="false"/>
+        
+    </h:form>
+                 </h:panelGrid>
+         </div>
+        
+    </h:body>
+</html>

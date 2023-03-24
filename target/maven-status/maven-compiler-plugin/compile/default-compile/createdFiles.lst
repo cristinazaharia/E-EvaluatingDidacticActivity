@@ -1,0 +1,11 @@
+clase\Profesor.class
+clase\Persoana.class
+managedBeans\ControllerCreareCont.class
+managedBeans\ControllerLogin.class
+Validatori\ValidatorCNP.class
+clase\Student.class
+com\mycompany\zc_eep\resources\JavaEE8Resource.class
+clase\ManagerConturi.class
+clase\ConexiuneBazaDate.class
+com\mycompany\zc_eep\JAXRSConfiguration.class
+clase\Utilitare.class

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+     >
+    <h:head>
+        <title>Profil</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+ <h:body>
+       <div class="card" >
+    <h:form >
+        <p:growl id="messages"/>
+
+        <p:menubar style="background-color: lightsteelblue">
+            <p:divider layout="vertical"/>
+            <p:submenu label="Evaluare didactică" icon="pi pi-fw pi-pencil">
+                <p:menuitem value="Chestionar"  url="evaluareProfesori.xhtml">
+                </p:menuitem>
+            </p:submenu>
+            <p:divider layout="vertical"/>
+            
+            <f:facet name="options">
+               
+                <p:commandButton value="Deconectare" icon="pi pi-fw pi-sign-out" styleClass="ui-button-info"
+                          style="background-color: windowframe"
+                          action="#{controllerLogin.clickLogout()}"/>
+            </f:facet>
+        </p:menubar>
+        
+    </h:form>
+               
+              
+</div>
+               
+        <div class="card" style="background-color: whitesmoke; width: 600px; height:550px; 
+             margin-left: 500px; margin-top: 50px; box-shadow: 1px 1px 5px black "  align="center">
+            <h:form>
+                <br></br>
+                <h2 style="font-size: 33px">Date personale</h2>
+                <br></br>
+                <h:panelGrid columns="4">
+                  
+            <p:outputLabel id="nume" styleClass="p-d-block" style="font-size: 25px; font-weight: bold" >Nume: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="nume" styleClass="p-d-block"  value="#{controllerLogin.nume}" style="font-size: 20px"></p:outputLabel>
+            
+            
+            <br></br>
+            <p:outputLabel id="prenume" styleClass="p-d-block" style="font-size: 25px; font-weight: bold" >Prenume: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="prenume" styleClass="p-d-block" value="#{controllerLogin.prenume}" style="font-size: 20px" ></p:outputLabel>
+            
+           
+            <br></br>
+            <p:outputLabel id="cnp" styleClass="p-d-block" style="font-size: 25px;font-weight: bold" >CNP: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="cnp" styleClass="p-d-block" value="#{controllerLogin.cnp}" style="font-size: 20px" ></p:outputLabel>
+            
+            
+            
+          
+            <br></br>
+          <p:outputLabel id="nr_matricol" styleClass="p-d-block" style="font-size: 25px;font-weight: bold">Nr. matricol: </p:outputLabel>
+          <br></br>
+          <p:outputLabel for="nr_matricol" styleClass="p-d-block" value="#{controllerLogin.nr_matricol}" style="font-size: 20px"></p:outputLabel>
+            
+            <br></br>
+            <p:outputLabel id="facultate" styleClass="p-d-block" style="font-size: 25px;font-weight: bold">Facultate: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="facultate" styleClass="p-d-block"  value ="#{controllerLogin.facultate}" style="font-size: 20px"></p:outputLabel>
+                <br></br>
+            <p:outputLabel id="specializare" styleClass="p-d-block" style="font-size: 25px;font-weight: bold">Specializare: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="specializare" styleClass="p-d-block" value="#{controllerLogin.specializare}" style="font-size: 20px"></p:outputLabel>
+              <br></br>
+            <p:outputLabel id="an_studiu" styleClass="p-d-block" style="font-size: 25px;font-weight: bold" >An studiu: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="an_studiu" styleClass="p-d-block" value="#{controllerLogin.an_studiu}" style="font-size: 20px"></p:outputLabel>
+              <br></br>
+            <p:outputLabel id="tip_studii" styleClass="p-d-block" style="font-size: 25px;font-weight: bold" >Tip studii: </p:outputLabel>
+            <br></br>
+            <p:outputLabel for="tip_studii" styleClass="p-d-block"  value="#{controllerLogin.program_studii}" style="font-size: 20px"></p:outputLabel>
+            
+             </h:panelGrid>
+           
+        </h:form> 
+        </div>
+    </h:body>
+</html>

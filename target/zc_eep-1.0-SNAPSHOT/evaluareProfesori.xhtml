@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Evaluare didactică</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+           <div class="card">
+    <h:form>
+
+        <p:menubar style="background-color: lightsteelblue">
+          
+            <f:facet name="options">
+               
+                <p:button value="Profil" icon="pi pi-fw pi-arrow-left" styleClass="ui-button-info" 
+                          outcome="student.xhtml" style="background-color: windowframe"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+    </div>
+        
+                  
+        <div class="card" style="background-color: whitesmoke; width: 800px; height:1600px; 
+             margin-left: 350px; margin-top: 50px; box-shadow: 1px 1px 5px black"  align="center">
+            <h:form>
+                <br></br>
+                <h2 style="font-size: 25px">Evaluare didactică - Chestionar</h2>
+                <br></br>
+                <h:panelGrid >
+                <p:outputLabel for="prof" styleClass="p-d-block">Cadru didactic:</p:outputLabel>
+                <p:selectOneMenu id="prof"  style="width:400px" 
+                                 required="true" requiredMessage="Alegeți profesor!"
+                                 >
+                   
+                    <f:selectItem itemLabel="Alegeți profesor" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Manu Alina, Tehnici de optimizare (Curs)" itemValue="1"/>
+                </p:selectOneMenu>
+            <br></br>
+            <br></br>
+            <p:outputLabel id="q1" styleClass="p-d-block" style="font-size: 18px;" 
+                           >Cât de utile considerați că sunt noțiunile predate în cadrul acestui curs/laborator/seminar?</p:outputLabel>
+           <p:selectOneRadio id="console" layout="grid" columns="1" 
+                             value="#{radioView.console}" unselectable="true"
+                             required="true">
+            <f:selectItem itemLabel="Într-o foarte mică măsură" itemValue="1"/>
+            
+            <f:selectItem itemLabel="Într-o mică măsură" itemValue="2"/>
+            <f:selectItem itemLabel="Mediu" itemValue="3"/>
+            <f:selectItem itemLabel="Într-o mare măsură" itemValue="4"/>
+            <f:selectItem itemLabel="Într-o foarte mare măsură" itemValue="5"/>
+        </p:selectOneRadio>
+            <br></br>
+             <p:outputLabel id="q2" styleClass="p-d-block" style="font-size: 18px;" 
+                           >În ce măsură considerați că participarea activă la acest curs/laborator/seminar este esențială? </p:outputLabel>
+           <p:selectOneRadio id="console1" layout="grid" columns="1" required="true"
+                             value="#{radioView.console}" unselectable="true">
+            <f:selectItem itemLabel="Într-o foarte mică măsură" itemValue="1"/>
+            <f:selectItem itemLabel="Într-o mică măsură" itemValue="2"/>
+            <f:selectItem itemLabel="Mediu" itemValue="3"/>
+            <f:selectItem itemLabel="Într-o mare măsură" itemValue="4"/>
+            <f:selectItem itemLabel="Într-o foarte mare măsură" itemValue="5"/>
+        </p:selectOneRadio>
+            <br></br>
+             <p:outputLabel id="q3" styleClass="p-d-block" style="font-size: 18px;" 
+                           >Cât de clare considerați că sunt noțiunile predate în timpul orelor de curs/laborator/seminar? </p:outputLabel>
+           <p:selectOneRadio id="c3" layout="grid" columns="1" required="true"
+                             value="#{radioView.console}" unselectable="true">
+            <f:selectItem itemLabel="Într-o foarte mică măsură" itemValue="1"/>
+            <f:selectItem itemLabel="Într-o mică măsură" itemValue="2"/>
+            <f:selectItem itemLabel="Mediu" itemValue="3"/>
+            <f:selectItem itemLabel="Într-o mare măsură" itemValue="4"/>
+            <f:selectItem itemLabel="Într-o foarte mare măsură" itemValue="5"/>
+        </p:selectOneRadio>
+            <br></br>
+             <p:outputLabel id="q4" styleClass="p-d-block" style="font-size: 18px;" 
+                           >În cadrul orelor de curs/laborator/seminar, vă sunt oferite răspunsuri lămuritoare la întrebările adresate cadrului didactic? </p:outputLabel>
+           <p:selectOneRadio id="c4" layout="grid" columns="1" required="true"
+                             value="#{radioView.console}" unselectable="true">
+            <f:selectItem itemLabel="Într-o foarte mică măsură" itemValue="1"/>
+            <f:selectItem itemLabel="Într-o mică măsură" itemValue="2"/>
+            <f:selectItem itemLabel="Mediu" itemValue="3"/>
+            <f:selectItem itemLabel="Într-o mare măsură" itemValue="4"/>
+            <f:selectItem itemLabel="Într-o foarte mare măsură" itemValue="5"/>
+        </p:selectOneRadio>
+            <br></br>
+             
+            <p:outputLabel id="q5" styleClass="p-d-block" style="font-size: 18px;" 
+                           >Per ansamblu, sunteți mulțumit/ă de activitatea din timpul orelor de curs/laborator/seminar?</p:outputLabel>
+            <p:selectOneRadio id="c5" layout="grid" columns="1" required="true"
+                             value="#{radioView.console}" unselectable="true">
+            <f:selectItem itemLabel="Într-o foarte mică măsură" itemValue="1"/>
+            <f:selectItem itemLabel="Într-o mică măsură" itemValue="2"/>
+            <f:selectItem itemLabel="Mediu" itemValue="3"/>
+            <f:selectItem itemLabel="Într-o mare măsură" itemValue="4"/>
+            <f:selectItem itemLabel="Într-o foarte mare măsură" itemValue="5"/>
+        </p:selectOneRadio>
+            <br></br>
+           
+           <p:outputLabel for="q6" styleClass="p-d-block" style="font-size: 18px;" 
+               >Considerați că acest curs/laborator/seminar are puncte tari?</p:outputLabel>
+            <p:inputTextarea id="q6" styleClass="p-d-block"
+                         style="width:300px"
+                        >
+                       
+            </p:inputTextarea>
+              <br></br>
+            <p:outputLabel for="q7" styleClass="p-d-block" style="font-size: 18px;" 
+               >Considerați că acest curs/laborator/seminar are puncte slabe?</p:outputLabel>
+          
+            <p:inputTextarea id="q7" styleClass="p-d-block"
+                         style="width:300px; ">
+                       
+            </p:inputTextarea>
+            <br></br>
+        <p:commandButton  value="Finalizați" styleClass="rounded-button"
+                          style="background-color: windowframe; align-content: center"
+                          ajax="false" 
+                         />
+
+             </h:panelGrid>
+           
+        </h:form> 
+        </div>
+    </h:body>
+</html>

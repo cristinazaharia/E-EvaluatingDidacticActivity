@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Perioada evaluare</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div class="card" >
+    <h:form >
+        <p:growl id="messages"/>
+
+        <p:menubar style="background-color: lightsteelblue">
+              <p:divider layout="vertical"/>
+            <p:submenu label="Conturi" icon="pi pi-fw pi-users">
+                <p:menuitem value="Crează cont student" url="creareContStudent.xhtml" />
+                <p:divider />
+                <p:menuitem value="Crează cont profesor" />
+            </p:submenu>
+            <p:divider layout="vertical"/>
+            <p:submenu   label="Orar" icon="pi pi-fw pi-calendar">
+               
+                <p:menuitem value="Adaugă" url="adaugareOrar.xhtml"/>
+               
+            </p:submenu>
+            
+            <p:divider layout="vertical"/>
+            <p:submenu label="Perioadă evaluare" icon="pi pi-fw pi-clock">
+                <p:menuitem value="Configurează" url="configurarePerioadaEvaluare.xhtml" />
+               
+            </p:submenu>
+            <p:divider layout="vertical"/>
+           
+
+          
+            <f:facet name="options">
+               
+                <p:commandButton value="Logout" icon="pi pi-fw pi-sign-out" styleClass="ui-button-info"
+                          style="background-color: windowframe"
+                          action="#{controllerLogin.clickLogout()}"/>
+            </f:facet>
+        </p:menubar>
+        
+    </h:form>
+               
+              
+</div>
+         <div class="orar" style = "width: 470px; height: 500px;  
+             box-shadow: 1px 1px 5px black ; margin-left: 550px; margin-top: 80px; background-color:whitesmoke " align="center">
+             <br></br>
+             <h5 style="font-size: 25px; font-stretch: condensed"> Configurare perioadă evaluare</h5>
+                  
+     <h:form class="perioada">
+          <p:growl id="msgs" />
+
+        <h:panelGrid columns="1">
+             <p:outputLabel for="semestru" value="Semestru: "/>
+                <p:selectOneMenu id="semestru" required="true" requiredMessage="Alegeti semestru"
+                                 value="#{controllerPerioadaEvaluare.semestru}">
+                    <f:selectItem itemLabel="Alegeti semestru" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="I" itemValue="I"/>
+                    <f:selectItem itemLabel="II" itemValue="II"/>
+                    
+                </p:selectOneMenu>
+             <br></br>
+               
+                <p:outputLabel for="data_incepere" value="Dată începere: " />
+                <p:datePicker id="data_incepere" required="true" requiredMessage="Alegeti data de incepere" 
+                              value="#{controllerPerioadaEvaluare.data_incepere}"
+                              />
+                <p:outputLabel for="data_incheiere" value="Dată încheiere: " />
+                <p:datePicker id="data_incheiere" required="true" requiredMessage="Alegeti data de incheiere"
+                              value="#{controllerPerioadaEvaluare.data_incheiere}"/>
+
+           
+
+            <p:divider />
+
+            <p:commandButton value="Confirmare"
+                             style="background-color: windowframe"
+                             ajax="false"
+                             action="#{controllerPerioadaEvaluare.configurarePerioadaEvaluare()}"
+                              
+                              />
+            <p:outputLabel id="msg" value="#{controllerPerioadaEvaluare.mesaj}"></p:outputLabel>
+          </h:panelGrid>
+    </h:form>
+                 
+         </div>
+        
+    </h:body>
+</html>

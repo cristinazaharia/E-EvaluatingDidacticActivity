@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Creare cont Profesor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+         <div class="card">
+    <h:form>
+
+        <p:menubar style="background-color: lightsteelblue">
+          
+            <f:facet name="options">
+               
+                <p:button value="Pagina principală" icon="pi pi-fw pi-arrow-left" styleClass="ui-button-info" 
+                          outcome="admin.xhtml" style="background-color: windowframe"/>
+            </f:facet>
+        </p:menubar>
+    </h:form>
+    </div>
+               
+        <div class="card" style="background-color: whitesmoke; width: 500px; height:900px;margin-bottom: 100px; 
+             margin-left: 500px; margin-top: 50px; box-shadow: 1px 1px 5px black "  align="center">
+            <br></br>
+            <h5 style="font-size:25px; font-stretch: condensed">Creare cont Profesor</h5>
+            <h:form>
+                <p:growl id="messages"/>
+                <h:panelGrid columns="1">
+                     
+            <p:outputLabel for="nume" styleClass="p-d-block" >Nume</p:outputLabel>
+            
+            <p:inputText id="nume" styleClass="p-d-block" 
+                         style="width:300px"
+                         required="true"
+                         requiredMessage="Câmpul Nume este obligatoriu!"
+                         value="#{controllerCreareCont.nume}"
+                         />
+            <br></br>
+            <p:outputLabel for="prenume" styleClass="p-d-block">Prenume</p:outputLabel>
+            
+            <p:inputText id="prenume" styleClass="p-d-block"
+                         style="width:300px"
+                         required="true"
+                         requiredMessage="Campul Prenume este obligatoriu!"
+                         value="#{controllerCreareCont.prenume}"
+                         />
+            <br></br>
+            <p:outputLabel for="cnp" styleClass="p-d-block">CNP</p:outputLabel>
+            
+            <p:inputText id="cnp" styleClass="p-d-block"
+                         style="width:300px"
+                         required="true"
+                         requiredMessage="Câmpul CNP este obligatoriu!"
+                         value ="#{controllerCreareCont.cnp}">
+                         <f:validator validatorId="validatorCNP"/>
+                         <f:ajax/>
+            </p:inputText>
+            <br></br>
+            <p:outputLabel for="email" styleClass="p-d-block">Email</p:outputLabel>
+            
+            <p:inputText id="email" styleClass="p-d-block"
+                         style="width:300px"
+                         required="true"
+                         requiredMessage="Câmpul Email este obligatoriu!"
+                         value="#{controllerCreareCont.email}">
+                         <f:validator validatorId="validatorEmail"/>
+                         <f:ajax/>
+                        
+                         </p:inputText>
+            <br></br>
+            <p:outputLabel for="facultate" styleClass="p-d-block">Facultate</p:outputLabel>
+
+                <p:selectOneMenu id="facultate"  style="width:300px" 
+                                 required="true" requiredMessage="Alegeti facultatea!"
+                                 value="#{controllerCreareCont.id_facultate}">
+                   
+                    <f:selectItem itemLabel="Alegeti facultate" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Matematică și Informatică" itemValue="Matematica si Informatica"/>
+                </p:selectOneMenu>
+            <br></br>
+         <p:outputLabel for="dis1" styleClass="p-d-block">Disciplină predată 1</p:outputLabel>
+
+                <p:selectOneMenu id="dis1"  style="width:300px" 
+                                 required="true" requiredMessage="Alegeti facultatea!"
+                                 value="#{controllerCreareCont.id_disciplina1}">
+                   
+                    <f:selectItem itemLabel="Alegeți disciplina" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Tehnici de optimizare" itemValue="1"/>
+                    <f:selectItem itemLabel="Modelare și Simulare" itemValue="2"/>
+                    <f:selectItem itemLabel="Tehnici de programare avansată" itemValue="3"/>
+                    
+                </p:selectOneMenu>
+            <br></br>
+          
+                 <p:outputLabel for="dis2" styleClass="p-d-block">Disciplină predată 2</p:outputLabel>
+
+                <p:selectOneMenu id="dis2"  style="width:300px" 
+                                 
+                                 value="#{controllerCreareCont.id_disciplina2}">
+                   
+                    <f:selectItem itemLabel="Alegeți disciplina" itemValue="" noSelectionOption="true"/>
+                    <f:selectItem itemLabel="Tehnici de optimizare" itemValue="1"/>
+                    <f:selectItem itemLabel="Modelare și Simulare" itemValue="2"/>
+                    <f:selectItem itemLabel="Tehnici de programare avansată" itemValue="3"/>
+                    
+                </p:selectOneMenu>
+            <br></br>
+            
+       
+             </h:panelGrid>
+            <br></br>
+            <p:commandButton  value="Confirmare" styleClass="rounded-button" style="background-color: windowframe" 
+                              action="#{controllerCreareCont.clickConfirmaProfesor()}"
+                              ajax="false"
+                         />
+            <br></br>
+            <br></br>
+            <p:outputLabel value="#{controllerCreareCont.mesaj}" style="align-items: center"/>
+            <br></br>
+         
+               
+        </h:form> 
+        </div>
+    </h:body>
+</html>
