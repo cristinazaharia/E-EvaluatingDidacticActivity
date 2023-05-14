@@ -22,7 +22,13 @@
    ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/36f851fe-b0fc-4752-a276-643f691941d4)
    
    The administrator can also create accounts for students and professors.
-    
+   
+   ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/28afb27d-4693-4d5f-b927-0842aa0c0a34)
+   ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/066c3ea7-d1a7-4563-9d4b-7d26a11ea228)
+   ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/40dab310-3240-47d3-ac1e-e4ea6561b6fd)
+   ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/d6d74e97-6841-4e60-98c9-66af936fe72d)
+
+ 
     
 
 
