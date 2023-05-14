@@ -21,7 +21,6 @@
    
    ![image](https://github.com/cristinazaharia/e-evaluare-profesori/assets/78911746/36f851fe-b0fc-4752-a276-643f691941d4)
     
-    And can also create accounts for students and professors.
 
 
 
