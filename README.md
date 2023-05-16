@@ -1,8 +1,8 @@
-# e-evaluare-profesori
+# E-EvaluatingDidacticActivity
 
 *Note: unfinished
 
-  E-EvaluareProfesori is a Java web application that uses JavaServer Faces framework and integrates PrimeFaces for the GUI. It uses Model-View-Controller architectural style, Glass Fish Server and MySql.
+  E-EvaluatingDidacticActivity is a Java web application that uses JavaServer Faces framework and integrates PrimeFaces for the GUI. It uses Model-View-Controller architectural style, Glass Fish Server and MySql.
   The purpose of the application is allowing students in a faculty to review the didactic activity. Both students and professors have an account that can use to log in. 
   After the student logged in, he/she can see their personal information as shown below:
   
